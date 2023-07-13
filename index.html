@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,7 +12,7 @@
 <body>
     <div id="particles-js"></div>
     <header>
-        <section id="home-container">
+        <section id="home-container" data-aos="fade-down">
             <button class="lenguage-change">
                 <img class= "lenguage-flag" src="./img/flag-sp.png" alt="flag-spain">
             </button>
@@ -23,21 +24,63 @@
             <li class="nav-bar__li-contact" >Contacto</li>
         </ul></nav>
     </header>
-    <main>
-        <section id="about-container">
-            <h2>Sobre mi</h2>
+    <main main>
+        <section id="about-container" >
+            <h2>Sobre Mi</h2>
+            <div class="img-about__container" data-aos="fade-up-right">
             <img class = "img-about"src="./img/profile.jpg" alt="profile.jpg">
-            <p class="p-about"></p>
-            <div class="cv">
+            </div>
+            <div class="p-container"  data-aos="fade-down-right"><p class="p-about">Soy tecnólogo en electronica y telecomunicaciones, apasionado por el desarrollo web, mi objetivo es crear experiencias digitales cautivadoras y funcionales. Me encanta combinar mi conocimiento técnico con habilidades de diseño para construir sitios web innovadores y atractivos. Con un enfoque en la atención al detalle y la calidad, me esfuerzo por superar las expectativas en cada proyecto. Siempre estoy buscando oportunidades para aprender y crecer en el campo del desarrollo web y estoy emocionado de trabajar en colaboración para crear soluciones únicas que hagan una diferencia.
+            </p>
+            <div class="my-skills" data-aos="fade-down-right">
+                <div class="skills-container">
+                    <div class="skills">
+                        <span>HTML</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="menu">
+                        <div class="html-menu"></div>
+                    </div>
+                    <div class="skills">
+                        <span>CSS</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="menu">
+                        <div class="css-menu"></div>
+                    </div>
+                    <div class="skills">
+                        <span>JAVASCRIPT</span>
+                        <span>50%</span>
+                    </div>
+                    <div class="menu">
+                        <div class="js-menu"></div>
+                    </div>
+                    <div class="skills">
+                        <span>GIT</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="menu">
+                        <div class="git-menu"></div>
+                    </div>
+                    <div class="skills">
+                        <span>ENGLISH</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="menu">
+                        <div class="en-menu"></div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="cv" data-aos="fade-down">
                 <button>Descargar CV</button>
             </div>
-            <div class="skills-container">
-                <img class= "first-skill" src="img/img1.png" alt="HTML">
-                <img class= "second-skill" src="img/img2.png" alt="CSS">
-                <img class= "third-skill" src="img/img3.png" alt="JavaScript">
-                <img class= "fourth-skill" src="img/img3.png" alt="Github">
+            <div class="learing-container" >
+                <p>Aprendiendo...</p>
+                <img class= "first-skill" src="./img/jslogo.png" alt="JS">
+                <img class= "second-skill" src="./img/reactlogo.png" alt="REACT">
             </div>
-            <div class="learing-container"></div>
+            
         </section>
         <section id = "proyects-container">
             <h2>Proyectos</h2>
@@ -53,10 +96,11 @@
                 </div> 
             </div>
         </section>
+        
         <section id = "contact-container">
             <h2>Contacto</h2>
             <ul class="">
-                <li class="nav__social-item">Email Me <i class="fa-brands fa-instagram"></i></li>
+                <li class="nav__social-item">Escribeme <i class="fa-brands fa-instagram"></i></li>
                 <li class="nav__social-item">LinkedIn <i class="fa-brands fa-facebook"></i></li>
                 <li class="nav__social-item">Github <i class="fa-brands fa-twitter"></i></li>
                 <li class="nav__social-item">Instagram <i class="fa-brands fa-youtube"></i></li>
@@ -66,7 +110,13 @@
     <footer></footer>
     <script src="./js/particles.min.js"></script>
     <script src="./js/app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/code.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+        });
+    </script>
 
 </body>
 </html>

@@ -100,40 +100,212 @@ body{
     background-color: var(--blacksmoth);
     height: 5vh;
     border: 2px solid var(--black);
-    border-bottom:3px solid var(--green) ;
-
+    border-bottom: 3px solid var(--green);
 }
+
+.fixed {
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    width: 100%;
+    
+  }
 
 .nav-bar__container ul{
     display: flex; 
     width: 100%;
     justify-content: space-around;
     list-style: none;
+    color: var(--white);
 }
 
 .nav-bar__container li:hover{
     color: var(--green);
     cursor: pointer;
+
 }
 
 #about-container {
+    padding-top: 3vh;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    flex-wrap: wrap;
+    background-color: var(--white);
+    height: 105vh;
+    width: 100%;
+}
+
+#about-container h2 {
+    font-size: 3rem;
+    display: flex;
+    text-align: center;
+    margin-top: 7vh;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.img-about__container {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    height: 48%;
+    margin-bottom: 8vh;
+}
+.img-about {
+    width: 35vh;
+    height: 45vh;
+    object-fit: cover;
+    border-radius: 1vh;
+}
+.cv {
+    display: flex;
+    width: 40%;
+    height: 10%;
+    justify-content: center;
+    align-content: start;
+}
+.cv button{
+    display: flex;
+    align-items: center;
+    background-color: var(--navy);
+    color: var(--lightest-slate);
+    padding: 1vh;
+    height: 4vh;
+    border: 4px double var(--green);
+    font-size: 1rem;
+    box-shadow: 0 0 5px var(--green), 0 0 5px var(--green), 0 0 5px var(--green), 0 0 5px var(--green);
+}
+.p-container{
+    width: 60%;
+    height: 60%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    background-color: var(--white);
+    justify-content:center;
+    align-self: start;
+    margin-top: 5vh;
+}
+.p-about{
+    display: flex;
+    justify-content: start;
+    font-size: 1.2rem;
+    color: var(--blacksmoth);
+    margin-left: 2vh;
+    width: 80%;
+    text-align: justify;
+}
+
+.my-skills{
+    display: flex;
+    width: 70%;
+    height: 70%;
+    margin-top: 5vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+.skills-container{
+    display: flex;
     width: 100%;
-    height: 95vh;
+    height: 80%;
+    justify-content: space-between;
+    flex-direction: column;
+    font-size: 1.6rem;
+}
+.skills{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.menu {
+    position: relative;
+    border: 0.5vh solid var(--green);
+    border-radius: 1vh;
+}
+.menu div {
+    position: relative;
+    width: 0;
+    height: 8px;
+    border-radius: 1vh;
+    background-color: var(--green);
 }
 
-.img-about {
-    width: 30vh;
-    height: 40vh;
-    object-fit: cover;
+.learing-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    perspective: 1000px;
 }
 
+.learing-container img{
+    width: 7vh;
+    height: 7vh;
+    object-fit: contain;
+    animation: rotate 6s infinite linear;
+    transform-style: preserve-3d;
+}
+
+.learing-container p {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.6rem;
+    margin-right: 2vh;
+}
 #proyects-container{
     width: 100%;
-    height: 95vh;
+    height: 100vh;
+    padding-top: 5vh;
     background: var(--grey);
 }
 
+.html-menu {
+    animation: html-bar 2s forwards;
+    animation-delay: 4s;
+}
+.css-menu {
+    animation: css-bar 2s forwards;
+    animation-delay: 4s;
+}
+.js-menu {
+    animation: js-bar 2s forwards;
+    animation-delay: 4s;
+}
+.git-menu {
+    animation: git-bar 2s forwards;
+    animation-delay: 4s;
+}
+.en-menu {
+    animation: en-bar 2s forwards;
+    animation-delay: 4s;
+}
+
+@keyframes html-bar {
+    100% {
+        width: 80%;
+    }  
+}
+@keyframes css-bar {
+    100% {
+        width: 70%;
+    }}
+@keyframes js-bar {
+    100% {
+        width: 50%;
+    }}
+@keyframes git-bar {
+    100% {
+        width: 70%;
+    }}
+@keyframes en-bar {
+    100% {
+        width: 75%;
+        }}
+@keyframes rotate {
+    0% {
+        transform: rotateY(0deg); /* Inicio de la rotación en el eje Y */
+            }
+    100% {
+        transform: rotateY(360deg); /* Fin de la rotación en el eje Y (una vuelta completa) */
+    }}

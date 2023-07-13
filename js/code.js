@@ -1,14 +1,19 @@
 let homeContainer = document.querySelector("#home-container");
-let aboutContainer = document.querySelector("#about-container");
 let pAbout = document.querySelector(".p-about");
+let aboutContainer = document.querySelector("#about-container");
+let navBar = document.querySelector(".nav-bar__container");
+
 let lenguageChange = document.querySelector(".lenguage-change");
 let homeNav = document.querySelector(".nav-bar__li-home");
 let aboutNav = document.querySelector(".nav-bar__li-about");
 let proyectsNav = document.querySelector(".nav-bar__li-proyects");
 let contactNav = document.querySelector(".nav-bar__li-contact");
 let buttonWelcome = document.createElement("button");
+let navBarOffsetTop = navBar.offsetTop;
+let mainElement = document.getElementById('#main');
 
 window.addEventListener("load", welcomeHome);
+window.addEventListener("scroll", navFixed);
 
 function welcomeHome(){
     let helloName = document.createElement("p");
@@ -28,9 +33,6 @@ function welcomeHome(){
     homeContainer.appendChild(buttonWelcome);
 
 }
-
-pAbout.innerHTML = "Soy tecnólogo en electronica y telecomunicaciones, apasionado por el desarrollo web, mi objetivo es crear experiencias digitales cautivadoras y funcionales.";
-aboutContainer.appendChild(pAbout);
 
 function toHome(){
     const destino = document.querySelector("#home-container");
@@ -67,7 +69,18 @@ function toHome(){
       block: "start" 
     });
   };
-homeNav.addEventListener("click",toHome);
+  function navFixed (){
+    let scrollPosY = window.scrollY || document.documentElement.scrollTop;
+    
+    if (scrollPosY >= navBarOffsetTop) {
+      navBar.classList.add("fixed");
+    } else {
+      navBar.classList.remove("fixed");
+    }
+    }
+
+
+homeNav.addEventListener("click", toHome);
 
 aboutNav.addEventListener("click", toAbout);
 
