@@ -172,9 +172,9 @@ body{
     background-color: var(--navy);
     color: var(--lightest-slate);
     padding: 1vh;
-    height: 4vh;
+    height: 5vh;
     border: 4px double var(--green);
-    font-size: 1rem;
+    font-size: 1.2rem;
     box-shadow: 0 0 5px var(--green), 0 0 5px var(--green), 0 0 5px var(--green), 0 0 5px var(--green);
 }
 .p-container{
@@ -259,6 +259,163 @@ body{
     padding-top: 5vh;
     background: var(--grey);
 }
+#proyects-container h2{
+    font-size: 3rem;
+    display: flex;
+    text-align: center;
+    margin-top: 7vh;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 55%;
+    height: 25%;
+    margin: 0 auto;
+    margin-top: 7vh;
+    grid-gap: 2vh;
+
+}
+.gallery-img__one{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    transition: all 500ms ease-out;
+}
+.gallery-img__two{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    transition: all 500ms ease-out;
+}
+
+.gallery-img__three {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    transition: all 500ms ease-out;
+}
+
+.gallery-img__four {
+    width: 100%;
+    height: 100%;
+    display: flex;    
+    position: relative;
+    transition: all 500ms ease-out;
+}
+
+.gallery img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 1vh;
+    cursor: pointer;
+    display: flex;
+    
+}
+
+.gallery-img__one .layer-one {
+    position: absolute;
+    color: var(--black);
+    background: var(--darkgreen);
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+    text-align:center;
+    opacity: 0;
+}
+.gallery-img__two .layer-two {
+    position: absolute;
+    color: var(--black);
+    background: var(--darkgreen);
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+    text-align:center;
+    opacity: 0;
+}
+
+.gallery-img__three .layer-three {
+    position: absolute;
+    color: var(--black);
+    background: var(--darkgreen);
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+    text-align:center;
+    opacity: 0;
+}
+
+.gallery-img__four .layer-four {
+    position: absolute;
+    color: var(--black);
+    background: var(--darkgreen);
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+    text-align:center;
+    opacity: 0;
+}
+
+
+.gallery h3 {
+    margin-top: 4vh;
+    margin-bottom: 10vh;
+    font-size: 2rem;
+}
+
+.gallery p {
+    font-size: 1rem;
+    color: var(--white);
+}
+
+.gallery-img__four h3 {
+    margin-top: 12vh;
+}
+.gallery-img__one :hover {
+    opacity: 1;
+    visibility: visible;
+    transition: all 500ms ease-out;
+    cursor: pointer; 
+}
+
+.gallery-img__two :hover {
+    opacity: 1;
+    visibility: visible;
+    transition: all 500ms ease-out;
+    cursor: pointer; 
+}
+
+.gallery-img__three :hover {
+    opacity: 1;
+    visibility: visible;
+    transition: all 500ms ease-out;
+    cursor: pointer; 
+}
+
+.gallery-img__four :hover {
+    opacity: 1;
+    visibility: visible;
+    transition: all 500ms ease-out;
+    cursor: pointer; 
+}
+
+#contact-container {
+    height: 50vh;
+    width: 100%;
+    background: var(--black);
+    padding-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+
 
 .html-menu {
     animation: html-bar 2s forwards;
