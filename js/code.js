@@ -19,6 +19,7 @@ let socialIcon = document.querySelector('.nav__social-item2');
 let socialIcon1 = document.querySelector('.nav__social-item3');
 let socialIcon2 = document.querySelector('.nav__social-item4');
 let checkButton = document.querySelector('.check');
+let responsiveBar = document.querySelector('.responsive-bar');
 let id= checkButton.checked;
 
 checkButton.addEventListener('click',lenguageChange)
@@ -30,6 +31,35 @@ function lenguageChange(){
   } else location.href="../index.html";
 }
 
+function mobileNav() {
+  if (window.innerWidth < 600){
+    homeNav.classList.add("inactive");
+    aboutNav.classList.add("inactive");
+    proyectsNav.classList.add("inactive");
+    contactNav.classList.add("inactive");
+    responsiveBar.classList.remove("inactive");
+  } else {
+    homeNav.classList.remove("inactive");
+    aboutNav.classList.remove("inactive");
+    proyectsNav.classList.remove("inactive");
+    contactNav.classList.remove("inactive");
+    responsiveBar.classList.add("inactive");
+  }
+}
+
+window.addEventListener("resize", mobileNav);
+
+mobileNav();
+
+responsiveBar.addEventListener(`click`,deployMenu);
+
+function deployMenu(){
+  homeNav.classList.remove("inactive");
+  aboutNav.classList.remove("inactive");
+  proyectsNav.classList.remove("inactive");
+  contactNav.classList.remove("inactive");
+  responsiveBar.classList.add("inactive");
+}
 
 window.addEventListener("load",function(){
   if (id==true) {
@@ -83,6 +113,7 @@ function toHome(){
       behavior: "smooth", 
       block: "start" 
     });
+    mobileNav()
   };
 
   function toAbout(){
@@ -92,6 +123,7 @@ function toHome(){
       behavior: "smooth", 
       block: "start" 
     });
+    mobileNav()
   };
 
   function toProyects(){
@@ -101,6 +133,7 @@ function toHome(){
         behavior: "smooth", 
         block: "start" 
       });
+      mobileNav()
     };
 
   function toContact(){
@@ -119,6 +152,7 @@ function toHome(){
     } else {
       navBar.classList.remove("fixed");
     }
+    mobileNav()
     }
 
 
